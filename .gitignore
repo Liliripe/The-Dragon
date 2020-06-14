@@ -1,6 +1,7 @@
 node_modules
 .cache/
 public/
+Designs-Misc/
 .DS_Store
 *.log
 contentful-import-error-log*
