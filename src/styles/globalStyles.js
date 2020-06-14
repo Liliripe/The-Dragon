@@ -1,4 +1,5 @@
 import { css } from '@emotion/core'
+import { theme } from '../theme'
 
 export const globalStyles = css`
   /* http://meyerweb.com/eric/tools/css/reset/
@@ -174,6 +175,7 @@ export const globalStyles = css`
     text-rendering: optimizeLegibility;
     text-shadow: rgba(0, 0, 0, 0.01) 0 0 1px;
     font-weight: 400;
+    background-color: ${theme.colors.background};
   }
 
   h1,

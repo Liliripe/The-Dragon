@@ -1,5 +1,7 @@
 import React from 'react'
 import { bool, func } from 'prop-types'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faBars } from '@fortawesome/free-solid-svg-icons'
 
 import {} from './style'
 
@@ -8,19 +10,8 @@ const Button = ({ open, setOpen }) => {
       <div
         open={open}
         onClick={() => setOpen(!open)}
-        animate={{
-          y: ['50px', '0px'],
-          opacity: ['0%', '100%'],
-        }}
-        transition={{
-          delay: 3.8,
-          duration: 0.5,
-          ease: 'easeInOut',
-          times: [0, 1],
-          loop: false,
-        }}
       >
-        button
+        <FontAwesomeIcon icon={faBars} />
       </div>
     )
 }

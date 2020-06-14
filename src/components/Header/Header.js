@@ -9,7 +9,7 @@ import Drawer from './Drawer'
 import Search from './Search'
 import Logo from '../Logo'
 import Subscribe from './Subscribe'
-import {} from './style'
+import { StyledNav } from './style'
 
 const Header = () => {
     const [open, setOpen] = useState(false)
@@ -19,8 +19,14 @@ const Header = () => {
         <Container>
           <Row>
             <Col>
-              <Button open={open} setOpen={setOpen} />
-              <Search />
+              <StyledNav>
+                <li>
+                  <Button open={open} setOpen={setOpen} />
+                </li>
+                <li>
+                  <Search />
+                </li>
+              </StyledNav>
             </Col>
 
             <Col xs={5}>

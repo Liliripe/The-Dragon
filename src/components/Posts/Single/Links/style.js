@@ -1,4 +1,5 @@
 import styled from '@emotion/styled'
+import { theme } from '../../../../theme'
 import { Link } from 'gatsby'
 
 export const Wrapper = styled.div`
@@ -10,17 +11,14 @@ export const Box = styled.div`
   justify-content: space-between;
   margin: 0 auto;
   width: 100%;
-  max-width: ${props => props.theme.sizes.maxWidthCentered};
+  max-width: ${theme.sizes.maxWidth};
   a {
-    background: ${props => props.theme.colors.primary};
+    background: ${theme.colors.primary};
     color: white;
     padding: 1em;
     border-radius: 2px;
     text-decoration: none;
     transition: 0.2s;
-    &:hover {
-      background: ${props => props.theme.colors.highlight};
-    }
   }
 `
 export const PreviousLink = styled(Link)`

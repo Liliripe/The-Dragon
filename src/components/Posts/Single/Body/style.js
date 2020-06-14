@@ -1,9 +1,10 @@
 import styled from '@emotion/styled'
+import { theme } from '../../../../theme'
 require('prismjs/themes/prism.css')
 
 export const Wrapper = styled.div`
   margin: 0 auto;
-  max-width: ${props => props.theme.sizes.maxWidth};
+  max-width: ${theme.sizes.maxWidth};
   h1,
   h2,
   h3 {
@@ -30,7 +31,7 @@ export const Wrapper = styled.div`
 
   a {
     transition: 0.2s;
-    color: ${props => props.theme.colors.text};
+    color: ${theme.colors.text};
   }
 
   del {
@@ -72,20 +73,20 @@ export const Wrapper = styled.div`
 
   hr {
     border-style: solid;
-    border-color: ${props => props.theme.colors.secondary};
+    border-color: ${theme.colors.secondary};
     margin: 0 0 2em 0;
   }
 
   blockquote {
     font-style: italic;
-    border-left: 4px solid ${props => props.theme.colors.secondary};
+    border-left: 4px solid ${theme.colors.secondary};
     padding: 0 0 0 0.5em;
   }
 
   pre {
     margin: 0 0 2em 0;
     border-radius: 2px;
-    background: ${props => props.theme.colors.secondary} !important;
+    background: ${theme.colors.secondary} !important;
     span {
       background: inherit !important;
     }

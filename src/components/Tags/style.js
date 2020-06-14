@@ -1,9 +1,10 @@
 import styled from '@emotion/styled'
+import { theme } from '../../theme'
 
 export const List = styled.ul`
   width: 100%;
   margin: 0 auto 1em auto;
-  max-width: ${props => props.theme.sizes.maxWidthCentered};
+  max-width: ${theme.sizes.maxWidthCentered};
 `
 export const Tag = styled.li`
   display: inline-block;
@@ -11,15 +12,15 @@ export const Tag = styled.li`
   a {
     float: left;
     transition: 0.2s;
-    background: ${props => props.theme.colors.tertiary};
+    background: ${theme.colors.tertiary};
     padding: 0.5em;
     border-radius: 2px;
     text-transform: capitalize;
     text-decoration: none;
-    color: ${props => props.theme.colors.text};
-    border: 1px solid ${props => props.theme.colors.secondary};
+    color: ${theme.colors.text};
+    border: 1px solid ${theme.colors.secondary};
     &:hover {
-      background: ${props => props.theme.colors.secondary};
+      background: ${theme.colors.secondary};
     }
   }
 `
