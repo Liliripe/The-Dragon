@@ -1,13 +1,18 @@
 import React from 'react'
+import { bool } from 'prop-types'
 
-import {} from './style'
+import { StyledDrawer } from './style'
 
-const Drawer = () => {
-    return (
-        <div>
-            Drawer
-        </div>
-    )
+const Drawer = ({ open }) => {
+  return (
+    <StyledDrawer open={open}>
+        test
+    </StyledDrawer>
+  )
+}
+
+Drawer.propTypes = {
+  open: bool.isRequired,
 }
 
 export default Drawer

@@ -1,24 +1,17 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import Layout from '../components/Layout'
-import Latest from '../components/Posts/Latest'
-import Container from '../components/Container'
-import Pagination from '../components/Pagination'
 import SEO from '../components/SEO'
 import { startCase } from 'lodash'
+import Layout from '../components/Layout'
+import Container from '../components/Container'
+import Header from '../components/Header'
+import Latest from '../components/Posts/Latest'
 
 const Posts = ({ data, pageContext }) => {
   const posts = data.allContentfulPost.edges
-  const { humanPageNumber, basePath } = pageContext
-  const isFirstPage = humanPageNumber === 1
-  let featuredPost
+  const { basePath } = pageContext
   let ogImage
 
-  try {
-    featuredPost = posts[0].node
-  } catch (error) {
-    featuredPost = null
-  }
   try {
     ogImage = posts[0].node.heroImage.ogimg.src
   } catch (error) {
@@ -29,22 +22,12 @@ const Posts = ({ data, pageContext }) => {
     <Layout>
       <SEO title={startCase(basePath)} image={ogImage} />
       <Container>
-        {isFirstPage ? (
-          <>
-            <Latest {...featuredPost} featured basePath={basePath} />
-            {posts.slice(1).map(({ node: post }) => (
-              <Latest key={post.id} {...post} basePath={basePath} />
-            ))}
-          </>
-        ) : (
-          <>
-            {posts.map(({ node: post }) => (
-              <Latest key={post.id} {...post} basePath={basePath} />
-            ))}
-          </>
-        )}
+        <Header />
+
+        {/* {posts.slice(1).map(({ node: post }) => (
+          <Latest key={post.id} {...post} basePath={basePath} />
+        ))} */}
       </Container>
-      <Pagination context={pageContext} />
     </Layout>
   )
 }
