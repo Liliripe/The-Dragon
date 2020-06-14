@@ -10,10 +10,6 @@ export const useSiteMetadata = () => {
             description
             siteUrl
             image
-            menuLinks {
-              name
-              slug
-            }
           }
         }
       }

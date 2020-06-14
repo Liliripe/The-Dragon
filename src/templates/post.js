@@ -3,10 +3,10 @@ import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import Hero from '../components/Hero'
 import Container from '../components/Container'
-import PageBody from '../components/PageBody'
-import TagList from '../components/TagList'
-import PostLinks from '../components/PostLinks'
-import PostDetails from '../components/PostDetails'
+import Tags from '../components/Tags'
+import Body from '../components/Posts/Single/Body'
+import Links from '../components/Posts/Single/Links'
+import Details from '../components/Posts/Single/Details'
 import SEO from '../components/SEO'
 
 const PostTemplate = ({ data, pageContext }) => {
@@ -43,14 +43,14 @@ const PostTemplate = ({ data, pageContext }) => {
       />
       <Hero title={title} image={heroImage} height={'50vh'} />
       <Container>
-        {tags && <TagList tags={tags} basePath={basePath} />}
-        <PostDetails
+        {tags && <Tags tags={tags} basePath={basePath} />}
+        <Details
           date={publishDate}
           timeToRead={body.childMarkdownRemark.timeToRead}
         />
-        <PageBody body={body} />
+        <Body body={body} />
       </Container>
-      <PostLinks previous={previous} next={next} basePath={basePath} />
+      <Links previous={previous} next={next} basePath={basePath} />
     </Layout>
   )
 }

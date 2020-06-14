@@ -1,19 +1,17 @@
 export default {
   colors: {
-    background: '#ffffff',
-    text: '#121212',
+    background: '#f7f3eb',
+    text: '#230444',
     primary: '#121212',
     secondary: '#e9e9e9',
     tertiary: '#f3f3f3',
-    highlight: '#5b8bf7',
   },
   fonts: {
-    body:
-      '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif',
+    body: 'Libre Franklin, Open Sans, Arial, sans-serif',
+    heading: 'Cormorant, Playfair Display, Georgia, serif',
   },
   sizes: {
-    maxWidth: '1050px',
-    maxWidthCentered: '650px',
+    maxWidth: '1280px',
   },
   responsive: {
     small: '35em',
