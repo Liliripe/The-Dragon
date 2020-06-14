@@ -3,7 +3,7 @@ import { graphql } from 'gatsby'
 import SEO from '../components/SEO'
 import { startCase } from 'lodash'
 import Layout from '../components/Layout'
-import Container from '../components/Container'
+import Wrapper from '../components/Wrapper'
 import Header from '../components/Header'
 import Latest from '../components/Posts/Latest'
 
@@ -21,13 +21,13 @@ const Posts = ({ data, pageContext }) => {
   return (
     <Layout>
       <SEO title={startCase(basePath)} image={ogImage} />
-      <Container>
+      <Wrapper>
         <Header />
 
         {/* {posts.slice(1).map(({ node: post }) => (
           <Latest key={post.id} {...post} basePath={basePath} />
         ))} */}
-      </Container>
+      </Wrapper>
     </Layout>
   )
 }
