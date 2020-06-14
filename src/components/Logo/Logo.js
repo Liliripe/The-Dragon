@@ -1,10 +1,11 @@
 import React from 'react'
 
-import {} from './style'
+import { StyledLogo, LogoText } from './style'
 
 const Logo = ({ width, color }) => {
-    return (
-      <svg
+  return (
+    <>
+      <StyledLogo
         version="1.0"
         xmlns="http://www.w3.org/2000/svg"
         width={width}
@@ -68,8 +69,10 @@ c-58 -5 -232 -65 -475 -162 -284 -113 -311 -128 -401 -215 -166 -162 -273
 -23 10 -23 4z"
           />
         </g>
-      </svg>
-    )
+      </StyledLogo>
+      <LogoText>The Dragon</LogoText>
+    </>
+  )
 }
 
 export default Logo
