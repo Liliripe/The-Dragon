@@ -1,4 +1,5 @@
 import { css } from '@emotion/core'
+
 export const globalStyles = css`
   /* http://meyerweb.com/eric/tools/css/reset/
  v2.0 | 20110126
@@ -169,9 +170,19 @@ export const globalStyles = css`
     line-height: 1;
     font-size: 100%;
     font-variant-ligatures: none;
+    font-family: 'Libre Franklin', sans-serif;
     text-rendering: optimizeLegibility;
     text-shadow: rgba(0, 0, 0, 0.01) 0 0 1px;
     font-weight: 400;
+  }
+
+  h1,
+  h2, 
+  h3, 
+  h4, 
+  h5, 
+  h6 {
+    font-family: 'Cormorant', serif;
   }
 
   img {

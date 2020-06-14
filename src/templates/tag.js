@@ -4,8 +4,7 @@ import { startCase, orderBy } from 'lodash'
 import SEO from '../components/SEO'
 import moment from 'moment'
 import Layout from '../components/Layout'
-import Card from '../components/Card'
-import CardList from '../components/CardList'
+import Latest from '../components/Posts/Latest'
 import PageTitle from '../components/PageTitle'
 import Pagination from '../components/Pagination'
 import Container from '../components/Container'
@@ -45,11 +44,11 @@ const TagTemplate = ({ data, pageContext }) => {
             {title}
             &rdquo;
           </PageTitle>
-          <CardList>
+          <>
             {posts.slice(skip, limit * humanPageNumber).map(post => (
-              <Card {...post} key={post.id} basePath={basePath} />
+              <Latest {...post} key={post.id} basePath={basePath} />
             ))}
-          </CardList>
+          </>
         </Container>
         <Pagination context={pageContext} />
       </Layout>

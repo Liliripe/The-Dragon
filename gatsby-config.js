@@ -17,27 +17,13 @@ try {
 
 module.exports = {
   siteMetadata: {
-    title: 'GCN',
+    title: 'The Dragon',
     description:
-      'A starter template to build amazing static websites with Gatsby, Contentful and Netlify',
+      'An online magazine dedicated to tabletop gaming.',
     siteUrl: 'https://gcn.netlify.com',
     image: '/images/share.jpg',
-    menuLinks: [
-      {
-        name: 'Home',
-        slug: '/',
-      },
-      {
-        name: 'About',
-        slug: '/about/',
-      },
-      {
-        name: 'Contact',
-        slug: '/contact/',
-      },
-    ],
-    postsPerFirstPage: 7,
-    postsPerPage: 6,
+    postsPerFirstPage: 20,
+    postsPerPage: 20,
     basePath: '/',
   },
   plugins: [
@@ -77,6 +63,16 @@ module.exports = {
         trackingId: process.env.GOOGLE_ANALYTICS,
         head: true,
       },
+    },
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [
+          `cormorant\:400,400i,600,600i`,
+          `libre franklin\:400,400i,600,600i`
+        ],
+        display: 'swap'
+      }
     },
     'gatsby-plugin-sitemap',
     {

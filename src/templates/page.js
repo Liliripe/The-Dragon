@@ -3,7 +3,7 @@ import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import Container from '../components/Container'
 import PageTitle from '../components/PageTitle'
-import PageBody from '../components/PageBody'
+import Body from '../components/Posts/Single/Body'
 import SEO from '../components/SEO'
 
 const PageTemplate = ({ data }) => {
@@ -20,7 +20,7 @@ const PageTemplate = ({ data }) => {
       />
       <Container>
         <PageTitle>{title}</PageTitle>
-        <PageBody body={body} />
+        <Body body={body} />
       </Container>
     </Layout>
   )
