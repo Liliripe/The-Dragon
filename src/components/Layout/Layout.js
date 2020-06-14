@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import Footer from '../Footer'
 
+import 'bootstrap/dist/css/bootstrap.min.css'
 import { Global } from '@emotion/core'
 import { globalStyles } from '../../styles/globalStyles.js'
  

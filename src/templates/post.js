@@ -2,7 +2,7 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import Hero from '../components/Hero'
-import Container from '../components/Container'
+import Wrapper from '../components/Wrapper'
 import Tags from '../components/Tags'
 import Body from '../components/Posts/Single/Body'
 import Links from '../components/Posts/Single/Links'
@@ -42,14 +42,14 @@ const PostTemplate = ({ data, pageContext }) => {
         image={ogImage}
       />
       <Hero title={title} image={heroImage} height={'50vh'} />
-      <Container>
+      <Wrapper>
         {tags && <Tags tags={tags} basePath={basePath} />}
         <Details
           date={publishDate}
           timeToRead={body.childMarkdownRemark.timeToRead}
         />
         <Body body={body} />
-      </Container>
+      </Wrapper>
       <Links previous={previous} next={next} basePath={basePath} />
     </Layout>
   )

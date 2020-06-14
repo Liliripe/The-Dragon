@@ -7,7 +7,7 @@ import Layout from '../components/Layout'
 import Latest from '../components/Posts/Latest'
 import PageTitle from '../components/PageTitle'
 import Pagination from '../components/Pagination'
-import Container from '../components/Container'
+import Wrapper from '../components/Wrapper'
 
 const TagTemplate = ({ data, pageContext }) => {
   const posts = orderBy(
@@ -38,7 +38,7 @@ const TagTemplate = ({ data, pageContext }) => {
           description={`Posts Tagged: ${startCase(title)}`}
           image={ogImage}
         />
-        <Container>
+        <Wrapper>
           <PageTitle small>
             {numberOfPosts} Posts Tagged: &ldquo;
             {title}
@@ -49,7 +49,7 @@ const TagTemplate = ({ data, pageContext }) => {
               <Latest {...post} key={post.id} basePath={basePath} />
             ))}
           </>
-        </Container>
+        </Wrapper>
         <Pagination context={pageContext} />
       </Layout>
     </>
