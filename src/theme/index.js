@@ -1,9 +1,9 @@
-export default {
+export const theme = {
   colors: {
     background: '#f7f3eb',
-    text: '#1E033B',
-    primary: '#230444',
     secondary: '#e9e9e9',
+    text: '#230444',
+    primary: '#121212',
     tertiary: '#f3f3f3',
   },
   fonts: {

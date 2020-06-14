@@ -1,11 +1,12 @@
 import styled from '@emotion/styled'
+import { theme } from '../../theme'
 import Img from 'gatsby-image'
 
 export const Wrapper = styled.section`
   position: relative;
   min-height: 300px;
   height: auto;
-  @media (min-width: ${props => props.theme.responsive.small}) {
+  @media (min-width: ${theme.responsive.small}) {
     height: ${props => props.height || 'auto'};
   }
 `
@@ -33,7 +34,7 @@ export const Title = styled.h1`
   font-weight: 600;
   position: absolute;
   width: 100%;
-  max-width: ${props => props.theme.sizes.maxWidthCentered};
+  max-width: ${theme.sizes.maxWidth};
   padding: 0 1rem;
   top: 50%;
   left: 50%;

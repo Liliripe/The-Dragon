@@ -1,7 +1,8 @@
 import styled from '@emotion/styled'
+import { theme } from '../../theme'
 
 export const Form = styled.form`
-  max-width: ${props => props.theme.sizes.maxWidthCentered};
+  max-width: ${theme.sizes.maxWidth};
   margin: 0 auto;
   display: flex;
   flex-flow: row wrap;
@@ -11,8 +12,8 @@ export const Form = styled.form`
   textarea {
     font-family: inherit;
     font-size: inherit;
-    background: ${props => props.theme.colors.tertiary};
-    color: ${props => props.theme.colors.text};
+    background: ${theme.colors.tertiary};
+    color: ${theme.colors.text};
     border-radius: 2px;
     padding: 1em;
     &::-webkit-input-placeholder {
@@ -41,21 +42,19 @@ export const Form = styled.form`
     left: 0;
     z-index: 1;
     transition: 0.2s all;
-    opacity: ${props => (props.overlay ? '.8' : '0')};
-    visibility: ${props => (props.overlay ? 'visible' : 'hidden')};
   }
 `
 export const Name = styled.input`
   margin: 0 0 1em 0;
   width: 100%;
-  @media (min-width: ${props => props.theme.responsive.small}) {
+  @media (min-width: ${theme.responsive.small}) {
     width: 49%;
   }
 `
 export const Email = styled.input`
   margin: 0 0 1em 0;
   width: 100%;
-  @media (min-width: ${props => props.theme.responsive.small}) {
+  @media (min-width: ${theme.responsive.small}) {
     width: 49%;
   }
 `
@@ -67,12 +66,12 @@ export const Message = styled.textarea`
   resize: vertical;
 `
 export const Submit = styled.input`
-  background: ${props => props.theme.colors.text} !important;
+  background: ${theme.colors.text} !important;
   color: white !important;
   cursor: pointer;
   transition: 0.2s;
   &:hover {
-    background: ${props => props.theme.colors.highlight} !important;
+    background: ${theme.colors.highlight} !important;
   }
 `
 export const Modal = styled.div`
@@ -90,9 +89,7 @@ export const Modal = styled.div`
   flex-flow: column;
   align-items: flex-start;
   transition: 0.2s all;
-  opacity: ${props => (props.visible ? '1' : '0')};
-  visibility: ${props => (props.visible ? 'visible' : 'hidden')};
-  @media screen and (min-width: ${props => props.theme.responsive.small}) {
+  @media screen and (min-width: ${theme.responsive.small}) {
     min-width: inherit;
     max-width: 400px;
   }
@@ -102,7 +99,7 @@ export const Modal = styled.div`
   }
 `
 export const Button = styled.div`
-  background: ${props => props.theme.colors.text};
+  background: ${theme.colors.text};
   font-size: 1em;
   display: inline-block;
   margin: 0 auto;
@@ -117,8 +114,5 @@ export const Button = styled.div`
   z-index: 99;
   &:focus {
     outline: none;
-  }
-  &:hover {
-    background: ${props => props.theme.colors.highlight};
   }
 `

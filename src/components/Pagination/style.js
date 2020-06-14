@@ -1,10 +1,11 @@
 import styled from '@emotion/styled'
+import { theme } from '../../theme'
 import { Link } from 'gatsby'
 
 export const Wrapper = styled.div`
   width: 100%;
   margin: -1.5rem auto 2.5rem;
-  max-width: ${props => props.theme.sizes.maxWidth};
+  max-width: ${theme.sizes.maxWidth};
   padding: 0 1.5rem;
   display: flex;
   flex-flow: row wrap;
@@ -12,7 +13,7 @@ export const Wrapper = styled.div`
   align-items: baseline;
 `
 export const Button = styled(Link)`
-  background: ${props => props.theme.colors.primary};
+  background: ${theme.colors.primary};
   color: white;
   padding: 1rem;
   border-radius: 2px;
@@ -20,30 +21,25 @@ export const Button = styled(Link)`
   cursor: pointer;
   text-decoration: none;
   transition: 0.3s all;
-  &:hover {
-    background: ${props => props.theme.colors.highlight};
-  }
   @media (hover: none) {
-    background: ${props => props.theme.colors.primary} !important;
+    background: ${theme.colors.primary} !important;
   }
 `
 export const Numbers = styled.div`
-  border: 1px solid ${props => props.theme.colors.secondary};
+  border: 1px solid ${theme.colors.secondary};
   border-radius: 2px;
   display: inline-block;
-  float: left;
-  color: ${props => props.theme.colors.text};
   padding: 1rem;
-  background: white;
+  background-color: white;
   position: relative;
   transition: 0.3s all;
   svg {
-    fill: ${props => props.theme.colors.text};
+    fill: ${theme.colors.text};
     margin: 0 0 0 0.25rem;
     transition: 0.3s all;
   }
   &:hover {
-    background: ${props => props.theme.colors.tertiary};
+    background: ${theme.colors.tertiary};
   }
   @media (hover: none) {
     background: white !important;
