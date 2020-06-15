@@ -4,7 +4,7 @@ export const theme = {
     secondary: '#e9e9e9',
     text: '#230444',
     primary: '#121212',
-    tertiary: '#f3f3f3',
+    tertiary: '#751237',
   },
   fonts: {
     body: 'Libre Franklin, Open Sans, Arial, sans-serif',
