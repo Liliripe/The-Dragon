@@ -213,11 +213,23 @@ export const globalStyles = css`
     }
   }
 
+  a,
+  a:visited,
+  a:active,
+  a:hover {
+    text-decoration: none;
+  }
+
   body:not(.user-is-tabbing) button:focus,
   body:not(.user-is-tabbing) input:focus,
   body:not(.user-is-tabbing) select:focus,
   body:not(.user-is-tabbing) textarea:focus,
   body:not(.user-is-tabbing) a:focus {
     outline: none;
+  }
+
+  .container {
+    max-width: 100%;
+    width: 100%;
   }
 `

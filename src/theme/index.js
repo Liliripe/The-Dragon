@@ -14,8 +14,8 @@ export const theme = {
     maxWidth: '1280px',
   },
   responsive: {
-    small: '35em',
-    medium: '50em',
-    large: '70em',
+    small: '480px',
+    medium: '960px',
+    large: '1200px',
   },
 }

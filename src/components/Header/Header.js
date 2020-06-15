@@ -1,47 +1,74 @@
-import React, { useState } from 'react'
+import React from 'react'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
-import Col from 'react-bootstrap/Col'
 
-import Wrapper from '../Wrapper'
 import Button from './Button'
 import Drawer from './Drawer'
 import Search from './Search'
 import Logo from '../Logo'
 import Subscribe from './Subscribe'
-import { StyledNav } from './style'
+import { StyledHeader, StyledNav, NavCol, LogoCol } from './style'
 
-const Header = () => {
-  const [open, setOpen] = useState(false)
+let lastScrollY = 0
+let ticking = false
 
-  return (
-    <Wrapper>
-      <Container>
-        <Row>
-          <Col>
-            <StyledNav>
-              <li>
-                <Button open={open} setOpen={setOpen} />
-              </li>
-              <li>
-                <Search />
-              </li>
-            </StyledNav>
-          </Col>
+class Header extends React.Component {
+  state = {
+    isTop: true,
+  }
 
-          <Col xs={5}>
-            <Logo width="192px" color="#230444" />
-          </Col>
+  componentDidMount() {
+    var scrollpos = window.scrollY
+    var header = document.querySelector('.header')
 
-          <Col>
-            <Subscribe text="Subscribe" />
-          </Col>
-        </Row>
-      </Container>
+    function add_class_on_scroll() {
+      header.classList.add('header-active')
+    }
+    function remove_class_on_scroll() {
+      header.classList.remove('header-active')
+    }
 
-      <Drawer open={open} setOpen={setOpen} />
-    </Wrapper>
-  )
+    window.addEventListener('scroll', function() {
+      scrollpos = window.scrollY
+
+      if (scrollpos > 155) {
+        add_class_on_scroll()
+      } else {
+        remove_class_on_scroll()
+      }
+    })
+  }
+
+  render() {
+    return (
+      <StyledHeader>
+        <Container className="header">
+          <Row>
+            <NavCol>
+              <StyledNav className="menu-buttons">
+                <li>
+                  <Button />
+                </li>
+                <li>
+                  <Search />
+                </li>
+              </StyledNav>
+            </NavCol>
+
+            <LogoCol xs={5}>
+              <Logo width="192px" color="#230444" />
+            </LogoCol>
+
+            <NavCol>
+              <Subscribe text="Subscribe" />
+            </NavCol>
+          </Row>
+        </Container>
+
+        <Drawer />
+      </StyledHeader>
+    )
+  }
 }
 
 export default Header

@@ -23,6 +23,7 @@ const Posts = ({ data, pageContext }) => {
       <SEO title={startCase(basePath)} image={ogImage} />
       <Wrapper>
         <Header />
+        <div style={{height: '1000px'}}></div>
 
         {/* {posts.slice(1).map(({ node: post }) => (
           <Latest key={post.id} {...post} basePath={basePath} />
