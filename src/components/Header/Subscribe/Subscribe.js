@@ -1,12 +1,13 @@
 import React from 'react'
+import Button from '../../Button'
 
-import {} from './style'
+import { StyledSubscribe } from './style'
 
 const Subscribe = () => {
     return (
-        <div>
-            Subscribe
-        </div>
+        <StyledSubscribe className="subscribe-button">
+            <Button url="test.com">Subscribe</Button>
+        </StyledSubscribe>
     )
 }
 

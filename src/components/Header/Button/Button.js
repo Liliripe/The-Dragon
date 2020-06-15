@@ -1,18 +1,14 @@
 import React from 'react'
 import { bool, func } from 'prop-types'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBars } from '@fortawesome/free-solid-svg-icons'
+import SimpleLineIcon from 'react-simple-line-icons'
 
-import {} from './style'
+import { MenuButton } from './style'
 
 const Button = ({ open, setOpen }) => {
     return (
-      <div
-        open={open}
-        onClick={() => setOpen(!open)}
-      >
-        <FontAwesomeIcon icon={faBars} />
-      </div>
+      <MenuButton open={open} onClick={() => setOpen(!open)}>
+        <SimpleLineIcon name="menu" />
+      </MenuButton>
     )
 }
 
