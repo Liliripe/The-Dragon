@@ -5,6 +5,7 @@ export const StyledLogo = styled.svg`
   display: block;
   margin: 0 auto;
   padding: 20px 0 0;
+  max-width: 100%;
 `
 export const LogoText = styled.h1`
   font-size: 2.1vw;
@@ -14,6 +15,6 @@ export const LogoText = styled.h1`
   padding: 10px 0 0;
 
   @media screen and (max-width: ${theme.responsive.medium}) {
-    display: none;
+    font-size: 24px;
   }
 `
