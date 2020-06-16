@@ -3,11 +3,18 @@ import { Link } from 'gatsby'
 
 import { Post, StyledImg, Title, Date, ReadingTime, Excerpt } from './style'
 
-const Latest = ({ slug, heroImage, title, publishDate, body, ...props }) => {
+const Latest = ({
+  slug,
+  heroImage,
+  title,
+  publishDate,
+  body,
+  ...props
+}) => {
   return (
     <>
       {heroImage && body && (
-        <Post featured={props.featured}>
+        <Post>
           <Link to={`${props.basePath}/${slug}/`}>
             <StyledImg fluid={heroImage.fluid} backgroundColor={'#eeeeee'} />
             <Title>{title}</Title>
