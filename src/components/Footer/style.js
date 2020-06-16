@@ -17,7 +17,6 @@ export const List = styled.ul`
   align-items: flex-start;
   width: 100%;
   border-top: 1px solid ${theme.colors.secondary};
-  padding: 1em 0 2em;
   margin: 0 1.5em;
 `
 
@@ -25,6 +24,7 @@ export const Item = styled.li`
   display: inline-block;
   padding: 0.25em 0;
   width: 100%;
+  align-items: center;
   @media screen and (min-width: ${theme.responsive.small}) {
     width: auto;
   }
