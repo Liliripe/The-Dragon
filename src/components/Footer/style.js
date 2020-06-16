@@ -18,13 +18,13 @@ export const List = styled.ul`
   width: 100%;
   border-top: 1px solid ${theme.colors.secondary};
   margin: 0 1.5em;
+  align-items: center;
 `
 
 export const Item = styled.li`
   display: inline-block;
   padding: 0.25em 0;
   width: 100%;
-  align-items: center;
   @media screen and (min-width: ${theme.responsive.small}) {
     width: auto;
   }
