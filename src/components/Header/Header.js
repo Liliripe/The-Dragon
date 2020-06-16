@@ -9,9 +9,6 @@ import Logo from '../Logo'
 import Subscribe from './Subscribe'
 import { StyledHeader, StyledNav, NavCol, LogoCol } from './style'
 
-let lastScrollY = 0
-let ticking = false
-
 class Header extends React.Component {
   state = {
     isTop: true,

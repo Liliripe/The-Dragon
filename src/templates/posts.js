@@ -5,7 +5,7 @@ import { startCase } from 'lodash'
 import Layout from '../components/Layout'
 import Wrapper from '../components/Wrapper'
 import Header from '../components/Header'
-import Latest from '../components/Posts/Latest'
+import LatestList from '../components/Posts/Latest/List'
 
 const Posts = ({ data, pageContext }) => {
   const posts = data.allContentfulPost.edges
@@ -23,11 +23,7 @@ const Posts = ({ data, pageContext }) => {
       <SEO title={startCase(basePath)} image={ogImage} />
       <Wrapper>
         <Header />
-        <div style={{height: '1000px'}}></div>
-
-        {/* {posts.slice(1).map(({ node: post }) => (
-          <Latest key={post.id} {...post} basePath={basePath} />
-        ))} */}
+        <LatestList />
       </Wrapper>
     </Layout>
   )
@@ -42,9 +38,6 @@ export const query = graphql`
     ) {
       edges {
         node {
-          title
-          id
-          slug
           publishDate(formatString: "MMMM DD, YYYY")
           heroImage {
             title
@@ -53,13 +46,6 @@ export const query = graphql`
             }
             ogimg: resize(width: 1800) {
               src
-            }
-          }
-          body {
-            childMarkdownRemark {
-              timeToRead
-              html
-              excerpt(pruneLength: 80)
             }
           }
         }

@@ -1,16 +1,34 @@
 import styled from '@emotion/styled'
 import Col from 'react-bootstrap/Col'
+import { theme } from '../../theme'
 
 export const StyledHeader = styled.div`
+    position: relative;
+    width: 100%;
+
     .header-active {
         .menu-buttons,
         .logo-text,
         .subscribe-button {
+            z-index: 999;
             position: fixed;
             top: 15px;
         }
+        .logo-text {
+            top: 5px;
+        }
         .subscribe-button {
             width: 23%;
+        }
+        ::after {
+            content: ' ';
+            width: 100%;
+            height: 70px;
+            position: fixed;
+            z-index: 998;
+            top: 0;
+            left: 0;
+            background-color: ${theme.colors.background};
         }
     }
 `
