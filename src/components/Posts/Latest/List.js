@@ -1,9 +1,9 @@
 import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
 import Row from 'react-bootstrap/Row'
-import Col from 'react-bootstrap/Col'
 
 import Latest from './Latest'
+import { StyledCol } from './style'
 
 const List = () => (
   <StaticQuery
@@ -13,6 +13,7 @@ const List = () => (
           edges {
             node {
               title
+              author
               id
               slug
               publishDate(formatString: "MMMM DD, YYYY")
@@ -20,9 +21,6 @@ const List = () => (
                 title
                 fluid(maxWidth: 1800) {
                   ...GatsbyContentfulFluid_withWebp_noBase64
-                }
-                ogimg: resize(width: 1800) {
-                  src
                 }
               }
               body {
@@ -38,23 +36,29 @@ const List = () => (
     `}
     render={data => (
       <Row>
-        <Col xs={12} sm={3}>
+        <StyledCol xs={12} sm={3} className="border-right">
           {data.allContentfulPost.edges.slice(0, 2).map(({ node: post }) => (
-            <Latest key={post.id} {...post} basePath="" />
+            <Latest key={post.id} size="medium" {...post} basePath="" />
           ))}
-        </Col>
+        </StyledCol>
 
-        <Col xs={12} sm={6}>
+        <StyledCol xs={12} sm={6}>
           {data.allContentfulPost.edges.slice(2, 3).map(({ node: post }) => (
-            <Latest key={post.id} {...post} basePath="" />
+            <Latest
+              key={post.id}
+              size="large"
+              description
+              {...post}
+              basePath=""
+            />
           ))}
-        </Col>
+        </StyledCol>
 
-        <Col xs={12} sm={3}>
+        <StyledCol xs={12} sm={3} className="border-left">
           {data.allContentfulPost.edges.slice(3, 7).map(({ node: post }) => (
-            <Latest key={post.id} {...post} basePath="" />
+            <Latest key={post.id} size="small" {...post} basePath="" />
           ))}
-        </Col>
+        </StyledCol>
       </Row>
     )}
   />
