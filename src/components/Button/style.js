@@ -3,8 +3,8 @@ import { theme } from '../../theme'
 
 export const StyledButton = styled.a`
   color: #fff;
-  background-color: ${theme.colors.text};
-  border: 1px solid ${theme.colors.text};
+  background-color: ${theme.colors.primary};
+  border: 1px solid ${theme.colors.primary};
   border-radius: 4px;
   padding: 10px 18px 11px;
   font-size: 14px;

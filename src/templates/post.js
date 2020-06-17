@@ -6,18 +6,19 @@ import Col from 'react-bootstrap/Col'
 import Layout from '../components/Layout'
 import Hero from '../components/Hero'
 import PageTitle from '../components/PageTitle'
+import Byline from '../components/Byline'
 import Wrapper from '../components/Wrapper'
 import Header from '../components/Header'
 import Tags from '../components/Tags'
 import Body from '../components/Posts/Single/Body'
 import Details from '../components/Posts/Single/Details'
 import SEO from '../components/SEO'
-import { Author } from '../components/Posts/Single/Details/style'
 
 const PostTemplate = ({ data, pageContext }) => {
   const {
     title,
     author,
+    byline,
     metaDescription,
     heroImage,
     body,
@@ -49,6 +50,7 @@ const PostTemplate = ({ data, pageContext }) => {
         <Header />
         {tags && <Tags tags={tags} basePath={basePath} />}
         <PageTitle>{title}</PageTitle>
+        <Byline>{byline}</Byline>
         <Details date={publishDate} author={author} />
 
         <Row>
@@ -66,6 +68,7 @@ export const query = graphql`
   query($slug: String!) {
     contentfulPost(slug: { eq: $slug }) {
       title
+      byline
       slug
       author
       metaDescription {

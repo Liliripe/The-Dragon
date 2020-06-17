@@ -6,9 +6,6 @@ export const Wrapper = styled.section`
   position: relative;
   min-height: 300px;
   height: auto;
-  @media (min-width: ${theme.responsive.small}) {
-    height: ${props => props.height || 'auto'};
-  }
 `
 export const BgImg = styled(Img)`
   position: absolute;
@@ -26,19 +23,4 @@ export const BgImg = styled(Img)`
     width: 100%;
     z-index: 1;
   }
-`
-export const Title = styled.h1`
-  z-index: 2;
-  font-size: 3em;
-  text-transform: capitalize;
-  font-weight: 600;
-  position: absolute;
-  width: 100%;
-  max-width: ${theme.sizes.maxWidth};
-  padding: 0 1rem;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  color: white;
 `
