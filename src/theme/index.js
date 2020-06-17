@@ -6,6 +6,7 @@ export const theme = {
     textContrast: '#580AAB',
     primary: '#230444',
     tertiary: '#751237',
+    border: '#dee2e6',
   },
   fonts: {
     body: 'Libre Franklin, Open Sans, Arial, sans-serif',
