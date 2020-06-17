@@ -1,5 +1,8 @@
 import React from 'react'
 import { graphql } from 'gatsby'
+import Row from 'react-bootstrap/Row'
+import Col from 'react-bootstrap/Col'
+
 import Layout from '../components/Layout'
 import Hero from '../components/Hero'
 import PageTitle from '../components/PageTitle'
@@ -47,8 +50,13 @@ const PostTemplate = ({ data, pageContext }) => {
         {tags && <Tags tags={tags} basePath={basePath} />}
         <PageTitle>{title}</PageTitle>
         <Details date={publishDate} author={author} />
-        <Hero image={heroImage} height={'50vh'} />
-        <Body body={body} />
+
+        <Row>
+          <Col xs={8}>
+            <Hero image={heroImage} height={'50vh'} />
+            <Body body={body} />
+          </Col>
+        </Row>
       </Wrapper>
     </Layout>
   )
