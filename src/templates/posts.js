@@ -6,6 +6,7 @@ import Layout from '../components/Layout'
 import Wrapper from '../components/Wrapper'
 import Header from '../components/Header'
 import LatestList from '../components/Posts/Latest/List'
+import FeaturedList from '../components/Posts/Featured/List'
 
 const Posts = ({ data, pageContext }) => {
   const posts = data.allContentfulPost.edges
@@ -24,6 +25,7 @@ const Posts = ({ data, pageContext }) => {
       <Wrapper>
         <Header />
         <LatestList />
+        <FeaturedList />
       </Wrapper>
     </Layout>
   )
