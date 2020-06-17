@@ -1,6 +1,6 @@
 export const theme = {
   colors: {
-    background: '#f7f3eb',
+    background: '#ffffff',
     secondary: '#e9e9e9',
     text: '#230444',
     textContrast: '#580AAB',
@@ -15,8 +15,9 @@ export const theme = {
     maxWidth: '1280px',
   },
   responsive: {
-    small: '480px',
-    medium: '960px',
-    large: '1200px',
+    small: '576px',
+    medium: '768px',
+    large: '992px',
+    xlarge: '1200px',
   },
 }
