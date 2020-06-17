@@ -1,11 +1,31 @@
 import styled from '@emotion/styled'
 import { theme } from '../../../theme'
-import Img from 'gatsby-image'
+import BackgroundImage from 'gatsby-background-image'
+import Col from 'react-bootstrap/Col'
 
-export const Post = styled.li`
-  transition: background 0.2s;
+export const StyledCol = styled(Col)`
+  div:last-of-type {
+    border-bottom: 0 !important;
+  }
 `
-export const StyledImg = styled(Img)`
+export const Post = styled.div`
+  transition: background 0.2s;
+  padding: 10px 0;
+
+  .small {
+    height: 45px;
+  }
+  .medium {
+    height: 130px;
+  }
+  .large {
+    height: 440px;
+  }
+`
+export const StyledImg = styled(BackgroundImage)`
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 `
 export const Title = styled.h2`
 `
