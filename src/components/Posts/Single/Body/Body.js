@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Wrapper } from './style'
+import { Wrapper, Article } from './style'
 
 const Body = props => {
   return (

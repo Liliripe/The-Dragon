@@ -13,6 +13,7 @@ export const theme = {
   },
   sizes: {
     maxWidth: '1280px',
+    postMaxWidth: '672px',
   },
   responsive: {
     small: '480px',
