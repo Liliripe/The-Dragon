@@ -24,6 +24,8 @@ const Posts = ({ data, pageContext }) => {
       <Wrapper>
         <Header />
         <LatestList />
+
+        <div style={{ height: '1000px' }}></div>
       </Wrapper>
     </Layout>
   )
