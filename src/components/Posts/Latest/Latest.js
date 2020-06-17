@@ -3,14 +3,7 @@ import { Link } from 'gatsby'
 
 import { Post, StyledImg, Title, Excerpt } from './style'
 
-const Latest = ({
-  slug,
-  heroImage,
-  title,
-  author,
-  body,
-  ...props
-}) => {
+const Latest = ({ slug, heroImage, title, author, body, ...props }) => {
   return (
     <>
       {heroImage && body && (

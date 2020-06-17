@@ -2,16 +2,19 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import Hero from '../components/Hero'
+import PageTitle from '../components/PageTitle'
 import Wrapper from '../components/Wrapper'
+import Header from '../components/Header'
 import Tags from '../components/Tags'
 import Body from '../components/Posts/Single/Body'
-import Links from '../components/Posts/Single/Links'
 import Details from '../components/Posts/Single/Details'
 import SEO from '../components/SEO'
+import { Author } from '../components/Posts/Single/Details/style'
 
 const PostTemplate = ({ data, pageContext }) => {
   const {
     title,
+    author,
     metaDescription,
     heroImage,
     body,
@@ -19,8 +22,6 @@ const PostTemplate = ({ data, pageContext }) => {
     tags,
   } = data.contentfulPost
 
-  const previous = pageContext.prev
-  const next = pageContext.next
   const { basePath } = pageContext
 
   let ogImage
@@ -41,16 +42,14 @@ const PostTemplate = ({ data, pageContext }) => {
         }
         image={ogImage}
       />
-      <Hero title={title} image={heroImage} height={'50vh'} />
       <Wrapper>
+        <Header />
         {tags && <Tags tags={tags} basePath={basePath} />}
-        <Details
-          date={publishDate}
-          timeToRead={body.childMarkdownRemark.timeToRead}
-        />
+        <PageTitle>{title}</PageTitle>
+        <Details date={publishDate} author={author} />
+        <Hero image={heroImage} height={'50vh'} />
         <Body body={body} />
       </Wrapper>
-      <Links previous={previous} next={next} basePath={basePath} />
     </Layout>
   )
 }
@@ -60,12 +59,13 @@ export const query = graphql`
     contentfulPost(slug: { eq: $slug }) {
       title
       slug
+      author
       metaDescription {
         internal {
           content
         }
       }
-      publishDate(formatString: "MMMM DD, YYYY")
+      publishDate(formatString: "MMM DD, YYYY")
       publishDateISO: publishDate(formatString: "YYYY-MM-DD")
       tags {
         title
@@ -83,7 +83,6 @@ export const query = graphql`
       }
       body {
         childMarkdownRemark {
-          timeToRead
           html
           excerpt(pruneLength: 320)
         }

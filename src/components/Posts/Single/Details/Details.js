@@ -1,13 +1,12 @@
 import React from 'react'
 
-import { Wrapper, Date, ReadingTime } from './style'
+import { Wrapper, Date, Author } from './style'
 
 const Details = props => {
   return (
     <Wrapper>
-      <Date>📅 {props.date}</Date>
-      <span>•</span>
-      <ReadingTime>{`⏱️${props.timeToRead} min read `}</ReadingTime>
+      <Author>{props.author}</Author>
+      <Date>{props.date}</Date>
     </Wrapper>
   )
 }

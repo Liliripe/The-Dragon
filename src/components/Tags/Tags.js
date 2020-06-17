@@ -1,31 +1,9 @@
 import React from 'react'
 import { Link } from 'gatsby'
 
-import styled from '@emotion/styled'
+import { List, Tag } from './style'
 
-export const List = styled.ul`
-  width: 100%;
-  margin: 0 auto 1em auto;
-  max-width: ${props => props.theme.sizes.maxWidthCentered};
-`
-export const Tag = styled.li`
-  display: inline-block;
-  margin: 0 0.25em 0.25em 0;
-  a {
-    float: left;
-    transition: 0.2s;
-    background: ${props => props.theme.colors.tertiary};
-    padding: 0.5em;
-    border-radius: 2px;
-    text-transform: capitalize;
-    text-decoration: none;
-    color: ${props => props.theme.colors.text};
-    border: 1px solid ${props => props.theme.colors.secondary};
-    &:hover {
-      background: ${props => props.theme.colors.secondary};
-    }
-  }
-`
+import styled from '@emotion/styled'
 
 const Tags = props => {
   return (
