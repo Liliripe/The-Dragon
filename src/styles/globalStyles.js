@@ -101,6 +101,8 @@ export const globalStyles = css`
   body {
     min-height: 100%;
     position: relative;
+    max-width: 100%;
+    overflow-x: hidden;
   }
   .siteRoot {
     height: 100vh;
@@ -130,13 +132,6 @@ export const globalStyles = css`
   nav,
   section {
     display: block;
-  }
-
-  @media screen and (min-width: 35em) {
-    html {
-      margin-right: calc(-100vw + 100%);
-      overflow-x: hidden;
-    }
   }
 
   ol,
@@ -185,6 +180,24 @@ export const globalStyles = css`
   h5,
   h6 {
     font-family: 'Cormorant', serif;
+  }
+  h1 {
+    font-size: 4.6rem;
+  }
+  h2 {
+    font-size: 3.6rem;
+  }
+  h3 {
+    font-size: 2.8rem;
+  }
+  h4 {
+    font-size: 2.2rem;
+  }
+  h5 {
+    font-size: 1.8rem;
+  }
+  h6 {
+    font-size: 1.6rem;
   }
 
   img {
