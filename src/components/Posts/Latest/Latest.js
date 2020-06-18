@@ -13,9 +13,11 @@ const Latest = ({ slug, heroImage, title, author, body, ...props }) => {
           {props.size == 'small' ? (
             <Row>
               <Col xs={7}>
-                <Title>
-                  <span className={`${props.size}-title`}>{title}</span>
-                </Title>
+                <Link to={`${props.basePath}/${slug}/`}>
+                  <Title>
+                    <span className={`${props.size}-title`}>{title}</span>
+                  </Title>
+                </Link>
                 <Author>{author}</Author>
               </Col>
               <Col>
@@ -40,9 +42,12 @@ const Latest = ({ slug, heroImage, title, author, body, ...props }) => {
                 />
               </Link>
               <Credit>Getty Images</Credit>
-              <Title>
-                <span className={`${props.size}-title`}>{title}</span>
-              </Title>
+              <Link to={`${props.basePath}/${slug}/`}>
+                <Title>
+                  <span className={`${props.size}-title`}>{title}</span>
+                </Title>
+              </Link>
+
               {props.description && (
                 <Excerpt>
                   <p
