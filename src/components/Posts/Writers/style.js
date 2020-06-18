@@ -1,6 +1,6 @@
 import styled from '@emotion/styled'
 import { theme } from '../../../theme'
-import BackgroundImage from 'gatsby-background-image'
+import Img from 'gatsby-image'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 
@@ -8,8 +8,12 @@ export const StyledRow = styled(Row)`
     margin-bottom: 20px;
 `
 export const StyledCol = styled(Col)`
-  margin-top: 60px;
-  margin-bottom: 50px;
+    margin-top: 60px;
+    margin-bottom: 50px;
+
+    @media screen and (max-width: ${theme.responsive.medium}) {
+        display: none;
+    }
 `
 export const Title = styled.div`
     width: 100%;
@@ -33,17 +37,30 @@ export const Title = styled.div`
         opacity: 0.7;
     }
 `
-export const StyledImage = styled(BackgroundImage)`
-    min-width: 70px;
-    max-width: 100%;
-    height: 70px;
-    border-radius: 70px;
-    overflow: hidden;
+export const StyledImage = styled(Img)`
+    width: 65px;
+    height: 65px;
+    border-radius: 100%;
+
+    @media screen and (max-width: ${theme.responsive.xlarge}) {
+        width: 40px;
+        height: 40px;
+    }
 `
 export const StyledInfo = styled(Col)`
     display: flex;
     flex-direction: column;
     justify-content: center;
 `
-export const Name = styled.strong``
-export const Description = styled.p``
+export const Name = styled.strong`
+    font-weight: 600;
+    font-size: 0.6rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 5px;
+`
+export const Description = styled.p`
+    opacity: 0.7;
+    font-size: 0.8rem;
+    line-height: 1.2rem;
+`

@@ -7,11 +7,7 @@ const Writers = ({ portrait, contributorName, contributorDescription, ...props }
   return (
     <StyledRow>
       <Col>
-        <StyledImage
-          Tag="section"
-          fluid={portrait.fluid}
-          backgroundColor={`#eeeeee`}
-        />
+        <StyledImage fluid={portrait.fluid} />
       </Col>
 
       <StyledInfo xs={9}>
