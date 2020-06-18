@@ -1,9 +1,8 @@
 import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
-import Row from 'react-bootstrap/Row'
 
 import Writers from './Writers'
-import { StyledCol } from './style'
+import { StyledCol, Title } from './style'
 
 const List = () => (
   <StaticQuery
@@ -12,18 +11,30 @@ const List = () => (
         allContentfulAuthor {
           edges {
             node {
+              portrait {
+                title
+                fluid {
+                  src
+                }
+              }
               contributorName
+              contributorDescription
             }
           }
         }
       }
     `}
     render={data => (
-      <>
-        {data.allContentfulAuthor.edges.slice(0, 2).map(({ node: author }) => (
-            <Writers key={author.id} {...author} />
+      <StyledCol xs={12} md={3}>
+        <Title>
+          <p>Writers</p>
+          <a href="#">See All</a>
+        </Title>
+
+        {data.allContentfulAuthor.edges.map(({ node: author }) => (
+          <Writers key={author.id} {...author} />
         ))}
-      </>
+      </StyledCol>
     )}
   />
 )

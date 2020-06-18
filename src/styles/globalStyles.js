@@ -232,6 +232,15 @@ export const globalStyles = css`
   a:hover {
     text-decoration: none;
   }
+  a,
+  a:visited {
+    color: ${theme.colors.text};
+    transition: color ease-in-out 0.2s;
+  }
+  a:hover,
+  a:active {
+    color: ${theme.colors.tertiary};
+  }
 
   body:not(.user-is-tabbing) button:focus,
   body:not(.user-is-tabbing) input:focus,

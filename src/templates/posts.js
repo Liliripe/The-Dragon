@@ -2,12 +2,17 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import SEO from '../components/SEO'
 import { startCase } from 'lodash'
+import Row from 'react-bootstrap/Row'
+import Col from 'react-bootstrap/Col'
+
 import Layout from '../components/Layout'
 import Wrapper from '../components/Wrapper'
 import Header from '../components/Header'
 import LatestList from '../components/Posts/Latest/List'
 import FeaturedList from '../components/Posts/Featured/List'
 import WritersList from '../components/Posts/Writers/List'
+import PopularList from '../components/Posts/Popular/List'
+import BookList from '../components/Posts/Books/List'
 
 const Posts = ({ data, pageContext }) => {
   const posts = data.allContentfulPost.edges
@@ -27,7 +32,11 @@ const Posts = ({ data, pageContext }) => {
         <Header />
         <LatestList />
         <FeaturedList />
-        <WritersList />
+        <Row>
+          <WritersList />
+          <PopularList />
+          <BookList />
+        </Row>
       </Wrapper>
     </Layout>
   )
