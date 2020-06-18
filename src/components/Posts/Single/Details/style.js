@@ -3,7 +3,9 @@ import { theme } from '../../../../theme'
 
 export const Wrapper = styled.div`
   margin: 0 auto 32px;
+  padding: 0 0 32px;
   max-width: ${theme.sizes.maxWidth};
+  border-bottom: 1px solid ${theme.colors.text};
 `
 export const Date = styled.p`
   display: inline-block;
