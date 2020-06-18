@@ -3,8 +3,10 @@ import { theme } from '../../../../theme'
 require('prismjs/themes/prism.css')
 
 export const Wrapper = styled.div`
-  margin: 0 auto;
+  padding: 10px 0 0;
+  margin: 10px auto 0;
   max-width: ${theme.sizes.maxWidth};
+  border-top: 1px solid ${theme.colors.secondary};
   h1,
   h2,
   h3 {
@@ -26,12 +28,12 @@ export const Wrapper = styled.div`
 
   p {
     line-height: 1.6;
-    margin: 0 0 2em 0;
+    margin: 0 0 16px 0;
   }
 
   a {
     transition: 0.2s;
-    color: ${theme.colors.text};
+    color: ${theme.colors.secondary};
   }
 
   del {
@@ -90,5 +92,14 @@ export const Wrapper = styled.div`
     span {
       background: inherit !important;
     }
+  }
+
+  ::after {
+    background-color: #000;
+    content: '';
+    display: block;
+    height: 1px;
+    margin: 16px auto;
+    width: 96px;
   }
 `

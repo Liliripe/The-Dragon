@@ -8,6 +8,8 @@ export const Wrapper = styled.footer`
   align-items: flex-start;
   margin: 0 auto;
   max-width: ${theme.sizes.maxWidth};
+  border-top: 1px solid ${theme.colors.secondary};
+  padding: 10px 0;
 `
 
 export const List = styled.ul`
@@ -16,8 +18,6 @@ export const List = styled.ul`
   justify-content: space-between;
   align-items: flex-start;
   width: 100%;
-  border-top: 1px solid ${theme.colors.secondary};
-  margin: 0 1.5em;
   align-items: center;
 `
 

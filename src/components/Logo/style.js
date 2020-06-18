@@ -4,7 +4,7 @@ import { theme } from '../../theme'
 export const StyledLogo = styled.svg`
   display: block;
   margin: 0 auto;
-  padding: 20px 0 0;
+  padding: 20px 0 10px;
   max-width: 100%;
 `
 export const LogoText = styled.h1`
@@ -12,7 +12,6 @@ export const LogoText = styled.h1`
   text-align: center;
   font-weight: bold;
   font-style: italic;
-  padding: 10px 0 0;
 
   @media screen and (max-width: ${theme.responsive.medium}) {
     font-size: 24px;
