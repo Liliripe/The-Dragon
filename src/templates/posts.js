@@ -6,11 +6,8 @@ import Layout from '../components/Layout'
 import Wrapper from '../components/Wrapper'
 import Header from '../components/Header'
 import LatestList from '../components/Posts/Latest/List'
-<<<<<<< HEAD
 import FeaturedList from '../components/Posts/Featured/List'
 import WritersList from '../components/Posts/Writers/List'
-=======
->>>>>>> 3e28f569a56df155760bc82fdd944f6989aedd78
 
 const Posts = ({ data, pageContext }) => {
   const posts = data.allContentfulPost.edges
