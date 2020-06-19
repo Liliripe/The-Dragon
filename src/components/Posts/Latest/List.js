@@ -1,5 +1,6 @@
 import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
+import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 
 import Latest from './Latest'
@@ -35,31 +36,33 @@ const List = () => (
       }
     `}
     render={data => (
-      <Row>
-        <StyledCol xs={12} md={3} className="border-right">
-          {data.allContentfulPost.edges.slice(0, 2).map(({ node: post }) => (
-            <Latest key={post.id} size="medium" {...post} basePath="" />
-          ))}
-        </StyledCol>
+      <Container fluid>
+        <Row>
+          <StyledCol xs={12} md={3} className="border-right">
+            {data.allContentfulPost.edges.slice(0, 2).map(({ node: post }) => (
+              <Latest key={post.id} size="medium" {...post} basePath="" />
+            ))}
+          </StyledCol>
 
-        <StyledCol xs={12} md={6}>
-          {data.allContentfulPost.edges.slice(2, 3).map(({ node: post }) => (
-            <Latest
-              key={post.id}
-              size="large"
-              description
-              {...post}
-              basePath=""
-            />
-          ))}
-        </StyledCol>
+          <StyledCol xs={12} md={6}>
+            {data.allContentfulPost.edges.slice(2, 3).map(({ node: post }) => (
+              <Latest
+                key={post.id}
+                size="large"
+                description
+                {...post}
+                basePath=""
+              />
+            ))}
+          </StyledCol>
 
-        <StyledCol xs={12} md={3} className="border-left">
-          {data.allContentfulPost.edges.slice(3, 7).map(({ node: post }) => (
-            <Latest key={post.id} size="small" {...post} basePath="" />
-          ))}
-        </StyledCol>
-      </Row>
+          <StyledCol xs={12} md={3} className="border-left">
+            {data.allContentfulPost.edges.slice(3, 7).map(({ node: post }) => (
+              <Latest key={post.id} size="small" {...post} basePath="" />
+            ))}
+          </StyledCol>
+        </Row>
+      </Container>
     )}
   />
 )
