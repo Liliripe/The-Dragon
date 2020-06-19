@@ -1,12 +1,15 @@
 import React from 'react'
 import Col from 'react-bootstrap/Col'
 
-import { SearchLinks, StyledLink } from './style'
+import { MenuLinks, StyledLink } from './style'
 
-const Search = ({ width, offset }) => {
+const Menu = ({ width, offset }) => {
   return (
     <Col xs={{ width: width, offset: offset }}>
-      <SearchLinks>
+      <MenuLinks>
+        <li>
+          <StyledLink to="/">Home</StyledLink>
+        </li>
         <li>
           <StyledLink to="/">Posts</StyledLink>
         </li>
@@ -19,12 +22,9 @@ const Search = ({ width, offset }) => {
         <li>
           <StyledLink to="/">Pages</StyledLink>
         </li>
-        <li>
-          <StyledLink to="/">Shop</StyledLink>
-        </li>
-      </SearchLinks>
+      </MenuLinks>
     </Col>
   )
 }
 
-export default Search
+export default Menu

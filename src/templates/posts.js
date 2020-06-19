@@ -3,7 +3,6 @@ import { graphql } from 'gatsby'
 import SEO from '../components/SEO'
 import { startCase } from 'lodash'
 import Row from 'react-bootstrap/Row'
-import Col from 'react-bootstrap/Col'
 
 import Layout from '../components/Layout'
 import Wrapper from '../components/Wrapper'
@@ -28,8 +27,8 @@ const Posts = ({ data, pageContext }) => {
   return (
     <Layout>
       <SEO title={startCase(basePath)} image={ogImage} />
-      <Wrapper>
-        <Header />
+      <Header />
+      <Wrapper top="170px">
         <LatestList />
         <FeaturedList />
         <Row>

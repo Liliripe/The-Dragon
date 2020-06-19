@@ -1,52 +1,32 @@
 import styled from '@emotion/styled'
-import Col from 'react-bootstrap/Col'
 import { theme } from '../../theme'
+import Row from 'react-bootstrap/Row'
 
-export const StyledHeader = styled.div`
+export const StyledHeader = styled.header`
     position: relative;
     width: 100%;
-
-    .header-active {
-        .menu-buttons,
-        .logo-text,
-        .subscribe-button {
-            z-index: 999;
-            position: fixed;
-            top: 15px;
-        }
-        .logo-text {
-            top: 5px;
-        }
-        .subscribe-button {
-            width: 23%;
-        }
-        ::after {
-            content: ' ';
-            width: 100%;
-            height: 70px;
-            position: fixed;
-            z-index: 998;
-            top: 0;
-            left: 0;
-            background-color: ${theme.colors.background};
-        }
-    }
+    margin-bottom: 30px;
 `
-export const StyledNav = styled.ul`
-    display: flex;
-
-    li {
-        padding-right: 25px;
-    }
+export const Navigation = styled.div`
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 98;
 `
-export const NavCol = styled(Col)`
-    height: 100px;
-    display: flex;
-    align-items: center;
+export const Primary = styled.div`
+    position: relative;
+    width: 100%;
+    background-color: ${theme.colors.purple};
 `
-export const LogoCol = styled(Col)`
-    height: 250px;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+export const Secondary = styled.div`
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    width: 100%;
+    background-color: ${theme.colors.darkPurple};
+`
+export const StyledRow = styled(Row)`
+    height: 60px;
+    align-content: center;
 `

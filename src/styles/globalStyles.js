@@ -102,7 +102,6 @@ export const globalStyles = css`
     min-height: 100%;
     position: relative;
     max-width: 100%;
-    overflow-x: hidden;
   }
   .siteRoot {
     height: 100vh;
@@ -248,10 +247,5 @@ export const globalStyles = css`
   body:not(.user-is-tabbing) textarea:focus,
   body:not(.user-is-tabbing) a:focus {
     outline: none;
-  }
-
-  .container {
-    max-width: 100%;
-    width: 100%;
   }
 `
