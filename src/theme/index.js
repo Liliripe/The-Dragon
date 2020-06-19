@@ -7,6 +7,13 @@ export const theme = {
     primary: '#230444',
     tertiary: '#751237',
     border: '#dee2e6',
+
+    purple: '#1e033b',
+    darkPurple: '#120223',
+    red: '#e62e2d',
+    yellow: '#F9B625',
+    teal: '#117475',
+    green: '#11752B',
   },
   fonts: {
     body: 'Libre Franklin, Open Sans, Arial, sans-serif',
