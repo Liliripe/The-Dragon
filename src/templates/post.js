@@ -48,6 +48,7 @@ const PostTemplate = ({ data, pageContext }) => {
       />
       <Wrapper>
         <Header />
+
         {tags && <Tags tags={tags} basePath={basePath} />}
         <PageTitle>{title}</PageTitle>
         <Byline>{byline}</Byline>

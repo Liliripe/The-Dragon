@@ -7,7 +7,7 @@ export const Wrapper = styled.div`
   max-width: ${theme.sizes.maxWidth};
   border-bottom: 1px solid ${theme.colors.text};
 `
-export const Date = styled.p`
+export const Date = styled.span`
   display: inline-block;
   font-size: 11px;
 `
