@@ -4,5 +4,5 @@ import { theme } from '../../theme'
 export const StyledWrapper = styled.div`
     width: 96%;
     max-width: ${theme.sizes.maxWidth};
-    margin: 0 auto;
+    margin: ${props => (props.top ? props.top : '0')} auto 0;
 `

@@ -1,5 +1,6 @@
 import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
+import Container from 'react-bootstrap/Container'
 
 import Featured from './Featured'
 import { StyledRow } from './style'
@@ -34,11 +35,13 @@ const List = () => (
       }
     `}
     render={data => (
-      <StyledRow>
-        {data.allContentfulPost.edges.slice(7, 11).map(({ node: post }) => (
-          <Featured key={post.id} {...post} basePath="" />
-        ))}
-      </StyledRow>
+      <Container fluid>
+        <StyledRow>
+          {data.allContentfulPost.edges.slice(7, 11).map(({ node: post }) => (
+            <Featured key={post.id} {...post} basePath="" />
+          ))}
+        </StyledRow>
+      </Container>
     )}
   />
 )

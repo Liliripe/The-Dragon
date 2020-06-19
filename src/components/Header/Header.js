@@ -1,13 +1,13 @@
 import React from 'react'
 import Container from 'react-bootstrap/Container'
-import Row from 'react-bootstrap/Row'
 
-import Button from './Button'
-import Drawer from './Drawer'
-import Search from './Search'
+import Wrapper from '../Wrapper'
 import Logo from '../Logo'
-import Subscribe from './Subscribe'
-import { StyledHeader, StyledNav, NavCol, LogoCol } from './style'
+import Menu from './Menu'
+import Submenu from './Submenu'
+import Search from './Search'
+import Social from './Social'
+import { StyledHeader, StyledLogo, Navigation, Primary, Secondary, StyledRow } from './style'
 
 class Header extends React.Component {
   state = {
@@ -38,31 +38,32 @@ class Header extends React.Component {
 
   render() {
     return (
-      <StyledHeader>
-        <Container className="header">
-          <Row>
-            <NavCol>
-              <StyledNav className="menu-buttons">
-                <li>
-                  <Button />
-                </li>
-                <li>
-                  <Search />
-                </li>
-              </StyledNav>
-            </NavCol>
+      <StyledHeader className="header">
+        <Logo width="100px" top="8px" />
 
-            <LogoCol xs={5}>
-              <Logo width="192px" color="#230444" />
-            </LogoCol>
+        <Navigation>
+          <Primary>
+            <Wrapper>
+              <Container fluid>
+                <StyledRow>
+                  <Submenu width="4" />
+                  <Social width="4" offset="4" />
+                </StyledRow>
+              </Container>
+            </Wrapper>
+          </Primary>
 
-            <NavCol>
-              <Subscribe text="Subscribe" />
-            </NavCol>
-          </Row>
-        </Container>
-
-        <Drawer />
+          <Secondary>
+            <Wrapper>
+              <Container fluid>
+                <StyledRow>
+                  <Menu width="4.5" />
+                  <Search width="4.5" offset="3" />
+                </StyledRow>
+              </Container>
+            </Wrapper>
+          </Secondary>
+        </Navigation>
       </StyledHeader>
     )
   }

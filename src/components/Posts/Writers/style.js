@@ -5,7 +5,7 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 
 export const StyledRow = styled(Row)`
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 `
 export const StyledCol = styled(Col)`
     margin-top: 60px;
@@ -41,6 +41,8 @@ export const StyledImage = styled(Img)`
     width: 65px;
     height: 65px;
     border-radius: 100%;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
 
     @media screen and (max-width: ${theme.responsive.xlarge}) {
         width: 40px;
