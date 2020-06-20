@@ -39,7 +39,6 @@ export const LogoText = styled.h1`
   text-align: center;
   font-weight: bold;
   font-style: italic;
-  padding: 10px 0 0;
 
   @media screen and (max-width: ${theme.responsive.medium}) {
     font-size: 24px;
