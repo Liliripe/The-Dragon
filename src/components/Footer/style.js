@@ -6,10 +6,16 @@ export const Wrapper = styled.footer`
   flex-flow: row wrap;
   justify-content: space-between;
   align-items: flex-start;
-  margin: 0 auto;
+  margin: 60px auto 0;
   max-width: ${theme.sizes.maxWidth};
   border-top: 1px solid ${theme.colors.secondary};
   padding: 10px 0;
+
+  @media screen and (max-width: ${theme.responsive.xlarge}) {
+    width: 100%;
+    text-align: center;
+    padding: 30px 20px;
+  }
 `
 
 export const List = styled.ul`
@@ -25,12 +31,16 @@ export const Item = styled.li`
   display: inline-block;
   padding: 0.25em 0;
   width: 100%;
+  font-size: 0.6rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+
   @media screen and (min-width: ${theme.responsive.small}) {
     width: auto;
   }
-  a {
-    font-weight: 600;
-    transition: all 0.2s;
-    color: ${theme.colors.text};
-  }
+`
+export const LogoText = styled.h6`
+  font-size: 1.5rem;
+  font-weight: bold;
 `

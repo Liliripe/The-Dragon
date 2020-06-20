@@ -46,9 +46,9 @@ const PostTemplate = ({ data, pageContext }) => {
         }
         image={ogImage}
       />
-      <Wrapper>
-        <Header />
 
+      <Header />
+      <Wrapper top="170px">
         {tags && <Tags tags={tags} basePath={basePath} />}
         <PageTitle>{title}</PageTitle>
         <Byline>{byline}</Byline>

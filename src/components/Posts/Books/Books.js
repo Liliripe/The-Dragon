@@ -1,12 +1,13 @@
 import React from 'react'
 
-import {} from './style'
+import { BookTitle, BookAuthor } from './style'
 
-const Books = () => {
+const Books = ({ title, author, ...props }) => {
     return (
-        <div>
-            Books
-        </div>
+      <li>
+        <BookTitle>{title}</BookTitle>
+        <BookAuthor>{author}</BookAuthor>
+      </li>
     )
 }
 

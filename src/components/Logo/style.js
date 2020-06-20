@@ -24,7 +24,11 @@ export const StyledLogo = styled.div`
     text-align: center;
     height: auto;
     width: ${props => props.width};
-    z-index: 99;
+    z-index: 99999;
+
+    img:hover {
+      mix-blend-mode: difference;
+    }
 
     @media screen and (max-width: ${theme.responsive.large}) {
       background-color: ${theme.colors.darkPurple};
@@ -32,15 +36,5 @@ export const StyledLogo = styled.div`
       border-radius: 100%;
       border: 5px solid ${theme.colors.darkPurple};
     }
-  }
-`
-export const LogoText = styled.h1`
-  font-size: 2.1vw;
-  text-align: center;
-  font-weight: bold;
-  font-style: italic;
-
-  @media screen and (max-width: ${theme.responsive.medium}) {
-    font-size: 24px;
   }
 `
