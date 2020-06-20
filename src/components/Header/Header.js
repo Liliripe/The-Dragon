@@ -4,8 +4,8 @@ import Container from 'react-bootstrap/Container'
 import Wrapper from '../Wrapper'
 import Logo from '../Logo'
 import Menu from './Menu'
+import Account from './Account'
 import Submenu from './Submenu'
-import Search from './Search'
 import Social from './Social'
 import { StyledHeader, StyledLogo, Navigation, Primary, Secondary, StyledRow } from './style'
 
@@ -17,18 +17,21 @@ class Header extends React.Component {
   componentDidMount() {
     var scrollpos = window.scrollY
     var header = document.querySelector('.header')
+    var logo = document.querySelector('.logo')
 
     function add_class_on_scroll() {
       header.classList.add('header-active')
+      logo.classList.add('logo-active')
     }
     function remove_class_on_scroll() {
       header.classList.remove('header-active')
+      logo.classList.remove('logo-active')
     }
 
     window.addEventListener('scroll', function() {
       scrollpos = window.scrollY
 
-      if (scrollpos > 155) {
+      if (scrollpos > 59) {
         add_class_on_scroll()
       } else {
         remove_class_on_scroll()
@@ -38,7 +41,7 @@ class Header extends React.Component {
 
   render() {
     return (
-      <StyledHeader className="header">
+      <StyledHeader>
         <Logo width="100px" top="8px" />
 
         <Navigation>
@@ -46,19 +49,19 @@ class Header extends React.Component {
             <Wrapper>
               <Container fluid>
                 <StyledRow>
-                  <Submenu width="4" />
+                  <Account width="4" />
                   <Social width="4" offset="4" />
                 </StyledRow>
               </Container>
             </Wrapper>
           </Primary>
 
-          <Secondary>
+          <Secondary className="header">
             <Wrapper>
               <Container fluid>
                 <StyledRow>
                   <Menu width="4.5" />
-                  <Search width="4.5" offset="3" />
+                  <Submenu width="4.5" offset="3" />
                 </StyledRow>
               </Container>
             </Wrapper>

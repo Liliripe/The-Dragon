@@ -19,6 +19,15 @@ export const MenuLinks = styled.div`
         height: 2px;
         background-color: ${theme.colors.secondary};
     }
+
+    @media screen and (max-width: ${theme.responsive.xlarge}) {
+        li:last-of-type {
+            display: none;
+        }
+    }
+    @media screen and (max-width: ${theme.responsive.large}) {
+        display: none;
+    }
 `
 export const StyledLink = styled(Link)`
     color: ${theme.colors.secondary} !important;
@@ -34,5 +43,25 @@ export const StyledLink = styled(Link)`
         height: 50%;
         background-color: ${theme.colors.yellow};
         opacity: 0.3;
+    }
+`
+export const MenuButton = styled.div`
+    display: none;
+
+    @media screen and (max-width: ${theme.responsive.large}) {
+        display: block;
+        
+        a {
+            display: flex;
+            align-items: center;
+            color: ${theme.colors.secondary};
+        }
+        span {
+            padding-left: 10px;
+            font-weight: 600;
+            font-size: 0.65rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1rem;
+        }
     }
 `
