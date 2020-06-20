@@ -17,7 +17,7 @@ const Logo = ({ width, top }) => (
     `}
     render={data => (
       <StyledLogo top={top} width={width}>
-        <div className="logo-image">
+        <div className="logo logo-image">
           <Link to="/">
             <Img fluid={data.bannerImage.fluid} />
           </Link>

@@ -2,6 +2,7 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import SEO from '../components/SEO'
 import { startCase } from 'lodash'
+import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 
 import Layout from '../components/Layout'
@@ -28,14 +29,16 @@ const Posts = ({ data, pageContext }) => {
     <Layout>
       <SEO title={startCase(basePath)} image={ogImage} />
       <Header />
-      <Wrapper top="170px">
+      <Wrapper top="170px" mobileTop="100px">
         <LatestList />
         <FeaturedList />
-        <Row>
-          <WritersList />
-          <PopularList />
-          <BookList />
-        </Row>
+        <Container fluid>
+          <Row>
+            <WritersList />
+            <PopularList />
+            <BookList />
+          </Row>
+        </Container>
       </Wrapper>
     </Layout>
   )

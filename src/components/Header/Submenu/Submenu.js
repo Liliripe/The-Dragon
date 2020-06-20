@@ -1,14 +1,22 @@
 import React from 'react'
+import { Link } from 'gatsby'
+import SimpleLineIcon from 'react-simple-line-icons'
 import Col from 'react-bootstrap/Col'
 
-import { Links, StyledLink } from './style'
+import { SearchLinks, StyledLink, Media } from './style'
 
 const Submenu = ({ width, offset }) => {
   return (
     <Col xs={{ width: width, offset: offset }}>
-      <Links>
+      <SearchLinks>
         <li>
-          <StyledLink to="/">Advertisement</StyledLink>
+          <StyledLink to="/">Player Tips</StyledLink>
+        </li>
+        <li>
+          <StyledLink to="/">Mechanics</StyledLink>
+        </li>
+        <li>
+          <StyledLink to="/">Interviews</StyledLink>
         </li>
         <li>
           <StyledLink to="/">About</StyledLink>
@@ -16,7 +24,19 @@ const Submenu = ({ width, offset }) => {
         <li>
           <StyledLink to="/">Contact</StyledLink>
         </li>
-      </Links>
+      </SearchLinks>
+
+      <Media>
+        <Link to="/">
+          <SimpleLineIcon name="social-youtube" />
+        </Link>
+        <Link to="/">
+          <SimpleLineIcon name="social-reddit" />
+        </Link>
+        <Link to="/">
+          <SimpleLineIcon name="social-steam" />
+        </Link>
+      </Media>
     </Col>
   )
 }
