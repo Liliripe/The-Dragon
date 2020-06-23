@@ -48,14 +48,14 @@ const PostTemplate = ({ data, pageContext }) => {
       />
 
       <Header />
-      <Wrapper top="170px">
+      <Wrapper top="170px" mobileTop="96px">
         {tags && <Tags tags={tags} basePath={basePath} />}
         <PageTitle>{title}</PageTitle>
         <Byline>{byline}</Byline>
         <Details date={publishDate} author={author} />
 
         <Row>
-          <Col xs={8}>
+          <Col xs={12} md={8}>
             <Hero image={heroImage} height={'50vh'} />
             <Body body={body} />
           </Col>
