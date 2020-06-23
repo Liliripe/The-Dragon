@@ -18,7 +18,7 @@ const List = () => (
               publishDate(formatString: "MMMM DD, YYYY")
               heroImage {
                 title
-                fluid(maxWidth: 1800) {
+                fluid(maxWidth: 1800, maxHeight: 900) {
                   ...GatsbyContentfulFluid_withWebp_noBase64
                 }
               }
@@ -34,7 +34,7 @@ const List = () => (
           <a href="#">See All</a>
         </Title>
 
-        {data.allContentfulPost.edges.slice(11, 20).map(({ node: post }) => (
+        {data.allContentfulPost.edges.slice(0, 9).map(({ node: post }) => (
           <Popular key={post.id} {...post} basePath="" />
         ))}
       </StyledCol>
