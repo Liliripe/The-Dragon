@@ -9,7 +9,7 @@ const Footer = () => (
   <Wrapper>
     <List>
       <Item>
-        Copyright &copy; {today.getFullYear()} by RENAME_HERE. All rights
+        Copyright &copy; {today.getFullYear()} by The Dragon. All rights
         reserved.
       </Item>
 
